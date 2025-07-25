@@ -12,7 +12,7 @@ conda create -n adenv python=3.10
 conda activate adenv
 
 # Install dependencies
-pip install django celery redis django-celery-beat mypy
+pip install -r requiremnents.txt
 
 # Run Redis
 brew services start redis
