@@ -1,0 +1,31 @@
+Pseudo-code
+
+Data Models
+Brand
+    name
+    daily_budget
+    monthly_budget
+Campaign
+    brand_id
+    name
+    is_active
+    daily_spend
+    monthly_spend
+    dayparting_start (optional)
+    dayparting_end (optional)
+
+
+Key Logic
+Tracking Spend
+
+Increment daily_spend and monthly_spend as ads run.
+    Budget Enforcement
+
+If daily_spend ≥ daily_budget or monthly_spend ≥ monthly_budget, deactivate campaign.
+    Dayparting Check
+
+Campaigns should only be active during start_time ≤ now ≤ end_time
+    Resets
+
+Daily at midnight → reset daily_spend
+Monthly (1st of month) → reset monthly_spend
